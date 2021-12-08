@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+    <style>
+        #googlemap{
+            height: 500px;
+            width: 100%;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>First google map</h1>
+    <div id="googlemap"></div>
+
+    <script>
+        function mymap(){
+            let longlat = {
+                lat: 22.5726,
+                lng: 88.3639,
+            };
+            let maplocation = {
+                zoom: 9,
+                center: {lat: 22.5726, lng: 88.3639},
+            };
+            let map = new google.maps.Map(document.getElementById("googlemap"), maplocation);
+        }
+        
+    </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN_GIAHrPuaMY4JRnUbDUaSxeXr1I7suw&callback=mymap"></script>
+
+</body>
+</html>
